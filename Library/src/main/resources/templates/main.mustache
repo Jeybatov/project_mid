@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form action="/logout" method="post">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Published Date</th>
+                <th>Availability</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#books}}
+                <td>{{name}}</td>
+                <td>{{author}}</td>
+                <td>{{category}}</td>
+                <td>{{date}}</td>
+                <td>{{availability}}</td>
+            {{/books}}
+        </tbody>
+    </table>
+
+</body>
+</html>
